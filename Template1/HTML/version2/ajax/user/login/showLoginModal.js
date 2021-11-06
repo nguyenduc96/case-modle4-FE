@@ -27,7 +27,7 @@ function showLoginModal() {
             <!--                        <div class="popup_forgot">-->
             <!--                            <a href="#">Forgot Password ?</a>-->
             <!--                        </div>-->
-                                    <p>Don't Have An Account? <a href="#myModal" data-toggle="modal" class="ms_modal1 hideCurrentModel" onclick="showRegisterModal()">register here</a></p>
+                                    <p>Don't Have An Account? <a href="#myModal" data-toggle="modal" class="ms_modal1 hideCurrentModel" data-dismiss="modal">register here</a></p>
                                 </div>
                             </div>`
     $("#login-modal-content").html(inner);
