@@ -146,10 +146,7 @@ function playMusic(id) {
                                 <div class="jp-time-holder">
                                     <span class="jp-current-time" role="timer" aria-label="time">&nbsp;</span>
                                     <span class="jp-duration" role="timer" aria-label="duration">&nbsp;</span>
-                                <audio controls>
-                                  <source src="horse.ogg" type="audio/ogg">
-                                  <source src="http://localhost:8080/images/${data.song}" type="audio/mpeg">
-                                </audio>
+                                    <audio src="${URL_BASE}musics/${data?.song}" type="audio/mpeg" controls></audio>
                                 </div>
                             </div>
                         </div>
