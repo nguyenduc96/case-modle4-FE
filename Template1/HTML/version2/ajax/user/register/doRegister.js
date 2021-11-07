@@ -14,6 +14,10 @@ function doRegister() {
         //xử lý khi thành công
         success: function (data) {
             console.log("dang ki thanh cong");
+            let inner = `<span class="form_icon">
+                              Created Account !!! 
+                         </span>`
+            $("#register-success").html(inner);
         }
     })
     event.preventDefault();
