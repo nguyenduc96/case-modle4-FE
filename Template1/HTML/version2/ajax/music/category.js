@@ -61,7 +61,7 @@ function getMusicByCategory(i, result) {
                                     </div>
                                     <div class="w_tp_song_name">
                                         <h3><a href="#">${result[i].name}</a></h3>
-                                        <p>${result[i].user?.fullName}</p>
+                                        <p>Poster : ${result[i].user?.fullName}</p>
                                     </div>
                                 </div>
                             </div>

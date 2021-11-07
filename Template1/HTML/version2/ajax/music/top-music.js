@@ -27,7 +27,7 @@ function topMusic() {
                                     </div>
                                     <div class="w_tp_song_name">
                                         <h3><a href="#">${data[i].name}</a></h3>
-                                        <p>${data[i].user?.fullName}</p>
+                                        <p>Poster : ${data[i].user?.fullName}</p>
                                     </div>
                                 </div>
                             </div>
