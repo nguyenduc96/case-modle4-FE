@@ -11,7 +11,7 @@ function showRegisterModal() {
                             <h2>Register / Sign Up</h2>
                             <div class="form-group">
                                 <input type="text" placeholder="Enter Your Name" class="form-control" id="fullName" name="fullName" onchange="checkFullName()">
-                                   <span id="checked-fullName"></span>
+                                   <span style="color: white"  id="checked-fullName"></span>
                                    <span class="form_icon">
                                 <i class="fa_icon form-user" aria-hidden="true"></i>
                                 </span>
@@ -24,16 +24,16 @@ function showRegisterModal() {
                             </div>
                             <div class="form-group">
                                 <input type="text" placeholder="Enter Your Email" class="form-control" id="email" name="email" onchange="checkEmail()">
-                                <span id="checked-email"></span>
+                                <span style="color: white"  id="checked-email"></span>
                                 <span class="form_icon">
-                                <i class="fa_icon form-envelope" aria-hidden="true"></i>
+                                <i class="fa form-envelope" aria-hidden="true"></i>
                             </span>
                             </div>
                             <div class="form-group">
                                 <input type="text" placeholder="Enter Your Phone" class="form-control" id="phone" name="phone" onchange="checkPhone()">
-                                 <span id="checked-phone"></span>
+                                 <span style="color: white"  id="checked-phone"></span>
                                 <span class="form_icon">
-                                <i class="fa_icon form-envelope" aria-hidden="true"></i>
+                                <i class="fa fa-2x fa-mobile-phone" aria-hidden="true"></i>
                             </span>
                             </div>
                             <div class="form-group">
@@ -44,19 +44,19 @@ function showRegisterModal() {
                             </div>
                             <div class="form-group">
                                 <input type="text" placeholder="Enter Your Username" class="form-control" id="username" name="username" onchange="checkUserName()">
-                                <span id="checked-username"></span>
+                                <span style="color: white"  id="checked-username"></span>
                                 <span class="form_icon">
                                 <i class="fa_icon form-envelope" aria-hidden="true"></i>
                             </span>
                             </div>
                             <div class="form-group">
                                 <input type="password" placeholder="Enter Password" class="form-control" id="password" name="password" onchange="checkPassWord()">
-                                <span id="checked-password"></span>
+                                <span style="color: white"   id="checked-password"></span>
                                 <span class="form_icon">
                                 <i class="fa_icon form-lock" aria-hidden="true"></i>
                                 </span>
                             </div>
-                            <div class="form-group" id="register-success">
+                            <div style="color: white"  class="form-group" id="register-success">
                                 
                             </div>
                             <a href="#" class="ms_btn" onclick="doRegister()">register now</a>
