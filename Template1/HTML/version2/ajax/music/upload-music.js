@@ -1,4 +1,3 @@
-let category;
 
 function getAllCategory() {
     $.ajax({

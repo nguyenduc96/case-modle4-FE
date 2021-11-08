@@ -44,7 +44,7 @@ function showAllMusicByUser() {
                             <div class="weekly_right">
                                 <span class="w_song_time"></span>
                                 <span class="ms_more_icon" data-other="1">
-                                <img src="images/svg/more1.svg" alt="">
+                                <img src="images/svg/more1.svg" alt="" onclick="showOption()">
                                 </span>
                             </div>
                             <ul class="more_option">

@@ -1,5 +1,22 @@
+function category() {
+    $('#main-content').html(` <div class="ms_top_artist">
+            <div class="container-fluid">
+                <div class="row" id="show-category">
+                </div>
+            </div>
+        </div>
+
+        <!----Show category music---->
+        <div class="ms_weekly_wrapper">
+            <div class="ms_weekly_inner">
+                <div class="row" id="show-music-by-category">
+                </div>
+            </div>
+        </div>`)
+    showAllCategory();
+}
 const URL_BASE = 'http://localhost:8080/';
-showAllCategory();
+
 
 function getCategory(result, i) {
     return `<div class="col-lg-2 col-md-6">
@@ -118,6 +135,9 @@ function showAllMusicByCategory(id) {
 
 function playMusic(id) {
     $.ajax({
+        headers: {
+            'Authorization' : 'Bearer ' + currentUser.token
+        },
         type: "GET",
         url: URL_BASE + `musics/${id}`,
         success: function (data) {

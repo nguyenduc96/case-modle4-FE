@@ -7,7 +7,9 @@ function showLoginRegisterButton() {
         inner = ` <a href="#" class="ms_btn login_btn"  data-toggle="modal" data-target="#myModal3" onclick="showModalUpload()"><span>Upload music</span></a>
                  <a href="#" class="ms_btn login_btn" onclick="showAllMusicByUser()"><span>${currentUser.username}</span></a>
                  <a href="javascript:;" class="ms_btn login_btn" onclick="doLogout()"><span>logout</span></a>`
+
     }
 
     $("#login-register-button").html(inner);
+    homePage();
 }
