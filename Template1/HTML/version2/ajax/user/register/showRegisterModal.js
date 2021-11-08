@@ -61,7 +61,7 @@ function showRegisterModal() {
                             </div>
                             <a href="#" class="ms_btn" onclick="doRegister()">register now</a>
                         </form>
-                        <p>Already Have An Account? <a href="#myModal1" data-toggle="modal" class="ms_modal hideCurrentModel">login here</a></p>
+                        <p>Already Have An Account? <a href="#myModal1" data-toggle="modal" class="ms_modal hideCurrentModel" data-dismiss="modal" onclick="showLoginModal()">login here</a></p>
                     </div>
                 </div>`
     $("#register-modal-content").html(inner);

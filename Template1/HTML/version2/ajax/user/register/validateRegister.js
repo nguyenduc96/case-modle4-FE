@@ -74,7 +74,7 @@ function checkPhone(){
 }
 function checkUserName(){
     let username = $("#username").val();
-    const res = /^[a-z0-9_\.]+$/.exec(username);
+    const res = /^[a-z0-9_\.]{6,18}$/.exec(username);
     if(res == null) {
         $("#checked-username").text("*User name is not valid")
     }else {

@@ -38,11 +38,25 @@ Purchase:
     <script>
         let path = "http://localhost:8080";
         let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+        let currenMusic = JSON.parse(localStorage.getItem("currenMusic"));
+        let imageMusic;
+        let  titleMusic;
+        let artistMusic;
+        let  mp3Music;
+        if(currenMusic != null) {
+            imageMusic = currenMusic.image ;
+            titleMusic = currenMusic.name;
+            artistMusic = currenMusic.user.fullName;
+            mp3Music = `http://localhost:8080/music2/${currenMusic.song}`;
+        }
+
     </script>
     <script src="ajax/user/showLoginRegisterButton.js"></script>
     <script src="ajax/user/login/doLogout.js"></script>
     <script src="ajax/user/register/doRegister.js"></script>
     <script src="ajax/user/register/validateRegister.js"></script>
+    <script src="ajax/favorite/addNewFavorite.js"></script>
+<!--    <script src="ajax/music/playMusic.js"></script>-->
 </head>
 
 <body onload="showLoginRegisterButton()">
@@ -498,7 +512,7 @@ Purchase:
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 padding_right40">
-                        <div class="ms_weekly_box">
+                        <div class="ms_weekly_box" onclick="playMusic(2)" >
                             <div class="weekly_left">
                                     <span class="w_top_no">
 										01
@@ -533,7 +547,7 @@ Purchase:
                             </ul>
                         </div>
                         <div class="ms_divider"></div>
-                        <div class="ms_weekly_box">
+                        <div class="ms_weekly_box" onclick="playMusic(1)">
                             <div class="weekly_left">
                                     <span class="w_top_no">
 										02
@@ -1680,40 +1694,6 @@ Purchase:
         <div class="modal-dialog login_dialog">
             <!-- Modal content-->
             <div class="modal-content" id="login-modal-content">
-<!--                <button type="button" class="close" data-dismiss="modal">-->
-<!--                    <i class="fa_icon form_close"></i>-->
-<!--                </button>-->
-<!--                <div class="modal-body">-->
-<!--                    <div class="ms_register_img">-->
-<!--                        <img src="images/register_img.png" alt="" class="img-fluid" />-->
-<!--                    </div>-->
-<!--                    <div class="ms_register_form">-->
-<!--                        <h2>login / Sign in</h2>-->
-<!--                        <div class="form-group">-->
-<!--                            <input type="text" placeholder="Enter Username" class="form-control">-->
-<!--                            <span class="form_icon">-->
-<!--							<i class="fa_icon form-envelope" aria-hidden="true"></i>-->
-<!--						</span>-->
-<!--                        </div>-->
-<!--                        <div class="form-group">-->
-<!--                            <input type="password" placeholder="Enter Password" class="form-control">-->
-<!--                            <span class="form_icon">-->
-<!--						<i class="fa_icon form-lock" aria-hidden="true"></i>-->
-<!--						</span>-->
-<!--                        </div>-->
-<!--                        <div class="remember_checkbox">-->
-<!--                            <label>Keep me signed in-->
-<!--                                <input type="checkbox">-->
-<!--                                <span class="checkmark"></span>-->
-<!--                            </label>-->
-<!--                        </div>-->
-<!--                        <a href="profile.html" class="ms_btn" target="_blank">login now</a>-->
-<!--&lt;!&ndash;                        <div class="popup_forgot">&ndash;&gt;-->
-<!--&lt;!&ndash;                            <a href="#">Forgot Password ?</a>&ndash;&gt;-->
-<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
-<!--                        <p>Don't Have An Account? <a href="#myModal" data-toggle="modal" class="ms_modal1 hideCurrentModel">register here</a></p>-->
-<!--                    </div>-->
-<!--                </div>-->
             </div>
         </div>
     </div>
