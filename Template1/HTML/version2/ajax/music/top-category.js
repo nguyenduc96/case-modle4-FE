@@ -14,10 +14,12 @@ function topCategory() {
             for (let i = 0; i < data.length; i++) {
                     content += getCategory(data, i);
             }
-            $("#top-category").html(content)
+            $("#top-category").html(content);
         }
     })
 }
+
+
 
 
 
