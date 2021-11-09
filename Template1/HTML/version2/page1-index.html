@@ -56,7 +56,8 @@ Purchase:
     <script src="ajax/user/register/doRegister.js"></script>
     <script src="ajax/user/register/validateRegister.js"></script>
     <script src="ajax/favorite/addNewFavorite.js"></script>
-<!--    <script src="ajax/music/playMusic.js"></script>-->
+    <script src="ajax/music/playMusic.js"></script>
+    <!--    <script src="ajax/music/playMusic.js"></script>-->
 </head>
 
 <body onload="showLoginRegisterButton()">
@@ -512,18 +513,18 @@ Purchase:
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 padding_right40">
-                        <div class="ms_weekly_box" onclick="playMusic(2)" >
+                        <div class="ms_weekly_box" >
                             <div class="weekly_left">
                                     <span class="w_top_no">
 										01
 									</span>
                                 <div class="w_top_song">
                                     <div class="w_tp_song_img">
-                                        <img src="images/weekly/song1.jpg" alt="" class="img-fluid">
+                                        <img src="images/weekly/song1.jpg" alt=""  onclick="playMusic(2)" class="img-fluid">
                                         <div class="ms_song_overlay">
                                         </div>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="images/svg/play.svg"   onclick="playMusic(2)" alt="">
                                         </div>
                                     </div>
                                     <div class="w_tp_song_name">
@@ -547,18 +548,18 @@ Purchase:
                             </ul>
                         </div>
                         <div class="ms_divider"></div>
-                        <div class="ms_weekly_box" onclick="playMusic(1)">
+                        <div class="ms_weekly_box" >
                             <div class="weekly_left">
                                     <span class="w_top_no">
 										02
 									</span>
                                 <div class="w_top_song">
                                     <div class="w_tp_song_img">
-                                        <img src="images/weekly/song2.jpg" alt="" class="img-fluid">
+                                        <img src="images/weekly/song2.jpg" onclick="playMusic(1)" alt="" class="img-fluid">
                                         <div class="ms_song_overlay">
                                         </div>
                                         <div class="ms_play_icon">
-                                            <img src="images/svg/play.svg" alt="">
+                                            <img src="images/svg/play.svg" onclick="playMusic(1)" alt="">
                                         </div>
                                     </div>
                                     <div class="w_tp_song_name">
@@ -1587,15 +1588,6 @@ Purchase:
                                 </a>
                             </div>
                         </div>
-                        <div class="play_song_options">
-                            <ul>
-                                <li><a href="#"><span class="song_optn_icon"><i class="ms_icon icon_download"></i></span>download now</a></li>
-                                <li><a href="#"><span class="song_optn_icon"><i class="ms_icon icon_fav"></i></span>Add To Favourites</a></li>
-                                <li><a href="#"><span class="song_optn_icon"><i class="ms_icon icon_playlist"></i></span>Add To Playlist</a></li>
-                                <li><a href="#"><span class="song_optn_icon"><i class="ms_icon icon_share"></i></span>Share</a></li>
-                            </ul>
-                        </div>
-                        <span class="play-left-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
                     </div>
                     <!----Right Queue---->
                     <div class="jp_queue_wrapper">
@@ -1614,64 +1606,8 @@ Purchase:
                             </div>
                         </div>
                     </div>
-                    <div class="jp-type-playlist">
-                        <div class="jp-gui jp-interface flex-wrap">
-                            <div class="jp-controls flex-item">
-                                <button class="jp-previous" tabindex="0">
-                                    <i class="ms_play_control"></i>
-                                </button>
-                                <button class="jp-play" tabindex="0">
-                                    <i class="ms_play_control"></i>
-                                </button>
-                                <button class="jp-next" tabindex="0">
-                                    <i class="ms_play_control"></i>
-                                </button>
-                            </div>
-                            <div class="jp-progress-container flex-item">
-                                <div class="jp-time-holder">
-                                    <span class="jp-current-time" role="timer" aria-label="time">&nbsp;</span>
-                                    <span class="jp-duration" role="timer" aria-label="duration">&nbsp;</span>
-                                </div>
-                                <div class="jp-progress">
-                                    <div class="jp-seek-bar">
-                                        <div class="jp-play-bar">
-                                            <div class="bullet">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="jp-volume-controls flex-item">
-                                <div class="widget knob-container">
-                                    <div class="knob-wrapper-outer">
-                                        <div class="knob-wrapper">
-                                            <div class="knob-mask">
-                                                <div class="knob d3"><span></span></div>
-                                                <div class="handle"></div>
-                                                <div class="round">
-                                                    <img src="images/svg/volume.svg" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- <input></input> -->
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="jp-toggles flex-item">
-                                <button class="jp-shuffle" tabindex="0" title="Shuffle">
-                                    <i class="ms_play_control"></i></button>
-                                <button class="jp-repeat" tabindex="0" title="Repeat"><i class="ms_play_control"></i></button>
-                            </div>
-                            <div class="jp_quality_optn custom_select">
-                                <select>
-                                    <option>quality</option>
-                                    <option value="1">HD</option>
-                                    <option value="2">High</option>
-                                    <option value="3">medium</option>
-                                    <option value="4">low</option>
-                                </select>
-                            </div>
-                        </div>
+                    <div class="jp-type-playlist" id="jp-type-playlist">
+
                     </div>
                 </div>
             </div>
@@ -1850,7 +1786,6 @@ Purchase:
 <script type="text/javascript" src="js/plugins/swiper/js/swiper.min.js"></script>
 <script type="text/javascript" src="js/plugins/player/jplayer.playlist.min.js"></script>
 <script type="text/javascript" src="js/plugins/player/jquery.jplayer.min.js"></script>
-<script type="text/javascript" src="js/plugins/player/audio-player.js"></script>
 <script type="text/javascript" src="js/plugins/player/volume.js"></script>
 <script type="text/javascript" src="js/plugins/nice_select/jquery.nice-select.min.js"></script>
 <script type="text/javascript" src="js/plugins/scroll/jquery.mCustomScrollbar.js"></script>

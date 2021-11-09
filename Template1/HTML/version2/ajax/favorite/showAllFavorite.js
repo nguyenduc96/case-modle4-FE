@@ -29,15 +29,15 @@ function drawFavoriteMusic(data) {
                                     <span class="w_top_no">${i+1}</span>
                                 <div class="w_top_song">
                                     <div class="w_tp_song_img">
-                                        <img src="http://localhost:8080/images/${listFavorite[i].music.image}" alt="">
+                                        <img src="http://localhost:8080/images/${listFavorite[i].music.image}" onclick="playMusic(${listFavorite[i].music.id})" alt="">
                                         <div class="ms_song_overlay">
                                         </div>
                                         <div class="ms_play_icon">
-                                            <img src="http://localhost:8080/images/${listFavorite[i].music.image}" alt="">
+                                            <img src="http://localhost:8080/images/${listFavorite[i].music.image}" onclick="playMusic(${listFavorite[i].music.id})" alt="">
                                         </div>
                                     </div>
                                     <div class="w_tp_song_name">
-                                        <h3><a href="#">${listFavorite[i].music.name}</a></h3>
+                                        <h3><a href="#" onclick="playMusic(${listFavorite[i].music.id})">${listFavorite[i].music.name}</a></h3>
                                         <p>${listFavorite[i].music.user.fullName}</p>
                                     </div>
                                 </div>
@@ -54,5 +54,5 @@ function drawFavoriteMusic(data) {
      content += `</div>
             </div>
         </div>`
-    $("#content_container").html(content);
+    $("#main-content").html(content);
 }
