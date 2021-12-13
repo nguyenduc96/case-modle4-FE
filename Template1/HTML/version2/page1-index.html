@@ -56,7 +56,8 @@ Purchase:
     <script src="ajax/user/register/doRegister.js"></script>
     <script src="ajax/user/register/validateRegister.js"></script>
     <script src="ajax/favorite/addNewFavorite.js"></script>
-<!--    <script src="ajax/music/playMusic.js"></script>-->
+    <script src="ajax/music/playMusic.js"></script>
+    <!--    <script src="ajax/music/playMusic.js"></script>-->
 </head>
 
 <body onload="showLoginRegisterButton()">
@@ -423,64 +424,8 @@ Purchase:
                             </div>
                         </div>
                     </div>
-                    <div class="jp-type-playlist">
-                        <div class="jp-gui jp-interface flex-wrap">
-                            <div class="jp-controls flex-item">
-                                <button class="jp-previous" tabindex="0">
-                                    <i class="ms_play_control"></i>
-                                </button>
-                                <button class="jp-play" tabindex="0">
-                                    <i class="ms_play_control"></i>
-                                </button>
-                                <button class="jp-next" tabindex="0">
-                                    <i class="ms_play_control"></i>
-                                </button>
-                            </div>
-                            <div class="jp-progress-container flex-item">
-                                <div class="jp-time-holder">
-                                    <span class="jp-current-time" role="timer" aria-label="time">&nbsp;</span>
-                                    <span class="jp-duration" role="timer" aria-label="duration">&nbsp;</span>
-                                </div>
-                                <div class="jp-progress">
-                                    <div class="jp-seek-bar">
-                                        <div class="jp-play-bar">
-                                            <div class="bullet">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="jp-volume-controls flex-item">
-                                <div class="widget knob-container">
-                                    <div class="knob-wrapper-outer">
-                                        <div class="knob-wrapper">
-                                            <div class="knob-mask">
-                                                <div class="knob d3"><span></span></div>
-                                                <div class="handle"></div>
-                                                <div class="round">
-                                                    <img src="images/svg/volume.svg" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- <input></input> -->
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="jp-toggles flex-item">
-                                <button class="jp-shuffle" tabindex="0" title="Shuffle">
-                                    <i class="ms_play_control"></i></button>
-                                <button class="jp-repeat" tabindex="0" title="Repeat"><i class="ms_play_control"></i></button>
-                            </div>
-                            <div class="jp_quality_optn custom_select">
-                                <select>
-                                    <option>quality</option>
-                                    <option value="1">HD</option>
-                                    <option value="2">High</option>
-                                    <option value="3">medium</option>
-                                    <option value="4">low</option>
-                                </select>
-                            </div>
-                        </div>
+                    <div class="jp-type-playlist" id="jp-type-playlist">
+
                     </div>
                 </div>
             </div>
